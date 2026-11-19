@@ -5,14 +5,14 @@ const TicketForm = () => {
 	//ticketDefault potrà tornare utile anche quando dovrete resettare il form ;)
 	//nota: i campi sono inizializzati tutti a "null", va corretto!
 	const ticketDefault = {
-		name: null,
-		language: null,
-		urgency: null,
-		updates: null,
-		description: null,
-	};
+    name: "",
+    language: "HTML",
+    urgency: "",
+    updates: false,
+    description: "",
+};
 	//Potete agganciare questo state ai controlli del form ;)
-	const ticketData = useState(ticketDefault);
+	const [ticketData, setTicketData] = useState(ticketDefault);
 
 	//Potete agganciare questa funzione a un input per iniziare a testare
 	function handleForm(event) {
