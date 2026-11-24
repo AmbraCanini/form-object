@@ -26,7 +26,14 @@ const TicketForm = () => {
 				{/* Nome */}
 				<div className="mb-3">
 					<label className="form-label">Nome</label>
-					<input type="text" name="name" className="form-control" required />
+					<input
+    type="text"
+    name="name"
+    className="form-control"
+    required
+    value={ticketData.name}
+    onChange={handleForm}
+/>
 				</div>
 
 				{/* Selezione linguaggio */}
