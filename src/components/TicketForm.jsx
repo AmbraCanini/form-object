@@ -16,7 +16,10 @@ const TicketForm = () => {
 
 	//Potete agganciare questa funzione a un input per iniziare a testare
 	function handleForm(event) {
-		console.log(`Nome: "${event.target.name}" - Tipo ${event.target.type} - Valore: ${event.target.value}`);
+		setTicketData({
+        ...ticketData,
+        [event.target.name]: event.target.value
+    });
 	}
 
 	return (
