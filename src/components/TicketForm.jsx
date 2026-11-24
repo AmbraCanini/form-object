@@ -16,11 +16,15 @@ const TicketForm = () => {
 
 	//Potete agganciare questa funzione a un input per iniziare a testare
 	function handleForm(event) {
-		setTicketData({
+    setTicketData({
         ...ticketData,
         [event.target.name]: event.target.value
     });
-	}
+}
+
+function handleSubmit() {
+    console.log(ticketData);
+}
 
 	return (
 		<div className="container mt-4">
@@ -132,7 +136,13 @@ const TicketForm = () => {
 				</div>
 
 				{/* Pulsante di invio */}
-				<button type="submit" className="btn btn-primary">Invia richiesta</button>
+				<button
+    type="submit"
+    className="btn btn-primary"
+    onClick={handleSubmit}
+>
+    Invia richiesta
+</button>
 			</div>
 		</div>
 	);
