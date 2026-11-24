@@ -42,7 +42,12 @@ const TicketForm = () => {
 				{/* Selezione linguaggio */}
 				<div className="mb-3">
 					<label className="form-label">Linguaggio di programmazione</label>
-					<select name="language" className="form-select" >
+					<select
+    name="language"
+    className="form-select"
+    value={ticketData.language}
+    onChange={handleForm}
+>
 						<option value="HTML">HTML</option>
 						<option value="CSS">CSS</option>
 						<option value="JS">JavaScript</option>
@@ -57,15 +62,39 @@ const TicketForm = () => {
 					<label className="form-label">Livello di urgenza</label>
 					<div>
 						<div className="form-check">
-							<input type="radio" name="urgency" value="low" id="urgencyLow" className="form-check-input" />
+							<input
+    type="radio"
+    name="urgency"
+    value="low"
+    id="urgencyLow"
+    className="form-check-input"
+    checked={ticketData.urgency === "low"}
+    onChange={handleForm}
+/>
 							<label className="form-check-label" htmlFor="urgencyLow">Bassa</label>
 						</div>
 						<div className="form-check">
-							<input type="radio" name="urgency" value="medium" id="urgencyMedium" className="form-check-input" />
+							<input
+    type="radio"
+    name="urgency"
+    value="medium"
+    id="urgencyMedium"
+    className="form-check-input"
+    checked={ticketData.urgency === "medium"}
+    onChange={handleForm}
+/>
 							<label className="form-check-label" htmlFor="urgencyMedium">Media</label>
 						</div>
 						<div className="form-check">
-							<input type="radio" name="urgency" value="high" id="urgencyHigh" className="form-check-input" />
+							<input
+    type="radio"
+    name="urgency"
+    value="high"
+    id="urgencyHigh"
+    className="form-check-input"
+    checked={ticketData.urgency === "high"}
+    onChange={handleForm}
+/>
 							<label className="form-check-label" htmlFor="urgencyHigh">Alta</label>
 						</div>
 					</div>
