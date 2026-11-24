@@ -102,7 +102,19 @@ const TicketForm = () => {
 
 				{/* Checkbox aggiornamenti */}
 				<div className="mb-3 form-check">
-					<input type="checkbox" name="updates" id="updates" className="form-check-input" />
+					<input
+    type="checkbox"
+    name="updates"
+    id="updates"
+    className="form-check-input"
+    checked={ticketData.updates}
+    onChange={(event) =>
+        setTicketData({
+            ...ticketData,
+            updates: event.target.checked
+        })
+    }
+/>
 					<label className="form-check-label" htmlFor="updates">Ricevi aggiornamenti sulla richiesta</label>
 				</div>
 
